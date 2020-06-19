@@ -2,3 +2,4 @@
 Pipfile.lock
 *.env
 .vscode/
+.idea/
