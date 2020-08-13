@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_10_182818) do
+ActiveRecord::Schema.define(version: 2020_08_13_194407) do
+
+  create_table "issues", force: :cascade do |t|
+    t.string "i_type"
+    t.string "title"
+    t.string "description"
+    t.string "label"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "projects", force: :cascade do |t|
     t.string "title"
