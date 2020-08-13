@@ -1,4 +1,5 @@
 class ProjectsController < ApplicationController
+  # belongs_to :user
   before_action :set_project, only: [:show, :update, :destroy]
 
   # GET /projects

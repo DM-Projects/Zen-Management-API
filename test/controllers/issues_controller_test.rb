@@ -12,7 +12,7 @@ class IssuesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create issue" do
     assert_difference('Issue.count') do
-      post issues_url, params: { issue: { description: @issue.description, label: @issue.label, title: @issue.title, type: @issue.type } }, as: :json
+      post issues_url, params: { issue: { description: @issue.description, label: @issue.label, title: @issue.title, i_type: @issue.i_type } }, as: :json
     end
 
     assert_response 201
@@ -24,7 +24,7 @@ class IssuesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update issue" do
-    patch issue_url(@issue), params: { issue: { description: @issue.description, label: @issue.label, title: @issue.title, type: @issue.type } }, as: :json
+    patch issue_url(@issue), params: { issue: { description: @issue.description, label: @issue.label, title: @issue.title, i_type: @issue.i_type } }, as: :json
     assert_response 200
   end
 
