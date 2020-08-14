@@ -3,5 +3,6 @@
 #
 # Examples:
 #
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+  User.create([{name: "diego", username: "diegomfg", email: "diegoamatheus@gmail.com"}, {name: "daniel", username: "dunielm", email: "danielmm661@gmail.com"}])
+  Issue.create({title: "Seeded issue", description: "Seeded description", i_type: "test", label: "neglectable"})
+  Project.create([{title: "first project", description: "test project"}, {title: "title", description: "description"}])
