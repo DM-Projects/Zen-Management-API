@@ -1,14 +1,9 @@
 class UsersController < ApplicationController
-  # has_many :projects
-  # has_many :issues
-  # has_many :tickets
-  # Must create a migration which sets @projects belong_to a @user
   before_action :set_user, only: [:show, :update, :destroy]
 
   # GET /users
   def index
     @users = User.all
-
     render json: @users
   end
 
