@@ -16,6 +16,8 @@ class ProjectsController < ApplicationController
 
   # POST /projects
   def create
+    ###
+    # Beware that the current session's user id will be used to create the Project users/members
     @project = Project.new(project_params)
 
     if @project.save
