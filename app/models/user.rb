@@ -9,9 +9,7 @@ class User < ApplicationRecord
   # TODO: Research about the relation between Project <-> User.
     # Project can have as low as 1 member(user), but user can have no project.
 
-
-  ##
-    # @note since we don't want to lock the User or the Project model to depend on one another
-    # User's belong to projects, but at project creation, the current user's id will be aggregated to the new project record
+  # PROPOSAL: Project belongs_to :user. Because that User will be the original creator/author/owner of the project.
+    # The members of the project are an array of user ids that we can populate later.
 end
 

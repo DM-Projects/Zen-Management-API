@@ -1,40 +1,40 @@
 class UserprofileController < ApplicationController
 
   def getissues
-
     id = params['id']
-
     user = User.find(id)
-
     render json: user.issues
   end
 
   def gettickets
-
     id = params['id']
-
     test = Test.new(20, "Markeloff")
-
-    puts(test.id)
-    puts(test.name)
-
     render json: test.bit
 
   end
 
-end
+  def getDashboardAnalytics
 
-class Test
+    id = params['id']
+    user = User.find(id)
+    error = nil
 
-  attr_accessor :id, :name
+    dac = DashboardAccessController.new("De", 1997)
 
-  def initialize(id, name)
-    @id = id
-    @name = name
-  end
+    render json: dac
 
-  def bit
-    return {id: @id, name: @name}
+    # begin
+    #   issues = user.issues.length
+    #   tickets = user.tickets.length
+    #   raise("Error has occurred")
+    #   tickets = nil
+    #   issues = nil
+    #   error = "Issues or tickets error for user #{id}"
+    # rescue
+    #   puts{message="Error"}
+    # end
+    #
+    # render json: {'issues': issues, 'tickets': tickets, error: error}
   end
 
 end
