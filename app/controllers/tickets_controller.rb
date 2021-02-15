@@ -39,13 +39,14 @@ class TicketsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_ticket
-      @ticket = Ticket.find(params[:id])
-    end
 
-    # Only allow a trusted parameter "white list" through.
-    def ticket_params
-      params.require(:ticket).permit(:title, :description)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_ticket
+    @ticket = Ticket.find(params[:id])
+  end
+
+  # Only allow a trusted parameter "white list" through.
+  def ticket_params
+    params.require(:ticket).permit(:title, :description)
+  end
 end
