@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_09_160237) do
+ActiveRecord::Schema.define(version: 2021_02_23_000120) do
 
   create_table "issues", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "i_type"
@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(version: 2020_09_09_160237) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "password"
   end
 
   add_foreign_key "tickets", "users"
